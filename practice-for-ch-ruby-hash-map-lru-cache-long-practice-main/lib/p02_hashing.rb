@@ -4,11 +4,20 @@ end
 
 class Array
   def hash
+    hash_value = 0
+    (0...self.length).each do |i|
+      hash_value += i + 1
+      if self[i].is_a?(Integer)
+        hash_value += self[i] * i 
+      end
+    end
+    return hash_value
   end
 end
 
 class String
   def hash
+    
   end
 end
 
